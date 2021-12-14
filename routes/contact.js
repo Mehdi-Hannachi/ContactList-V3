@@ -1,9 +1,12 @@
 const express = require("express");
-const { models } = require("mongoose");
-const { addContact } = require("../controllers/contact.controller");
+const {
+  addContact,
+  getContacts,
+} = require("../controllers/contact.controller");
 
 const Router = express.Router();
 
 Router.post("/addContact", addContact);
+Router.get("/getContacts", getContacts);
 
 module.exports = Router;
